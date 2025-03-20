@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navigation Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+       .navbar-custom{
+        background-color: skyblue;
+       }
+       .navbar-custom, .navbar-brand,
+       .navbar-custom, .nav-link{
+        color: beige;
+       }
+       .navbar-custom, .navbar-link:hover{
+        color: black;
+       }
+       .img{
+        height: 50px;
+        width: 100px;
+       }
+       .background{
+      background-color: black;
+      color: floralwhite;
+    }
+    
+    .header1{
+        text-align: center;
+        background-color: black;
+        color: floralwhite;
+        border: auto;
+        padding: auto;
+        margin: 50px;
+    }
+    img{
+    margin-left: 50px;
+    }
+    .header2{
+        text-align: center;
+        background-color: darkblue;
+        color: floralwhite;
+        border: auto;
+        padding: auto;
+        margin: 50px;
+    }
+    body{
+        background-color: beige;
+    }
+    .header3{
+        text-align: center;
+        background-color: darkblue;
+        color: floralwhite;
+        border: auto;
+        padding: auto;
+        margin: 50px;
+    }
+    .header4{
+        text-align: center;
+        background-color: seagreen;
+        color: antiquewhite;
+        border: auto;
+        padding: auto;
+        margin: 50px;
+    }
+     .price-box {
+        display: none;
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .fare-btn {
+        margin: 10px;
+        padding: 10px;
+        background-color: lightgray;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .fare-btn:hover {
+        background-color: gray;
+        color: white;
+    }
+ .price-box {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(30%, 70%);
+            background-color: darkblue;
+            color: white;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <img src="trainlogo.png"><br><a class="navbar-brand">Train Station fair</a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="page2.html">Train Schedule</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="page3.html">Help</a>  
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+
+    </nav>
+    <div class="background mb-4">
+    <h2 class="text-center">Fare Guide</h2>
+</div>
+    <div class="header1">
+    <h3 class="container mb-6" class="text-center" id="leavingFrom">LEAVING FROM:</h3><br>
+</div>
+    <div class="header2">
+    <label>Place:</label>
+    <select id="select" name="select">
+        <option value="North Avenue">North Ave.</option>
+        <option value="Quezon Avenue">Quezon Ave.</option>
+        <option value="Kamuning">Kamuning</option>
+        <option value="Araneta Center-Cubao">Araneta Center-Cubao</option>
+        <option value="Santolan-Annapolis">Santolan-Annapolis</option>
+        <option value="Ortigas">Ortigas</option>
+        <option value="Shaw Boulevard">Shaw Boulevard</option>
+        <option value="Boni">Boni</option>
+        <option value="Guadalupe">Guadalupe</option>
+        <option value="Buendia">Buendia</option>
+        <option value="Ayala">Ayala</option>
+        <option value="Magallanes">Magallanes</option>
+        <option value="Taft Avenue">Taft Ave.</option>
+        </select> 
+</div>
+        <div class="header1">
+    <h3 class="container mb-6" class="text-center">GOING TO:</h3><br>
+</div>
+ <div class="header3">
+    <label>Destination:</label>
+    <select id="destination" name="select">
+        <option value="North Avenue" data-regular="20.00" data-discounted="15.00">North Ave.</option>
+        <option value="Quezon Avenue" data-regular="25.00" data-discounted="20.00">Quezon Ave.</option>
+        <option value="Kamuning" data-regular="30.00" data-discounted="25.00">Kamuning</option>
+        <option value="Araneta Center-Cubao" data-regular="35.00" data-discounted="30.00">Araneta Center-Cubao</option>
+        <option value="Santolan-Annapolis" data-regular="40.00" data-discounted="35.00">Santolan-Annapolis</option>
+        <option value="Ortigas" data-regular="45.00" data-discounted="40.00">Ortigas</option>
+        <option value="Shaw Boulevard" data-regular="50.00" data-discounted="45.00" id="destination">Shaw Boulevard</option>
+        <option value="Boni" data-regular="55.00" data-discounted="50.00">Boni</option>
+        <option value="Guadalupe" data-regular="60.00" data-discounted="55.00">Guadalupe</option>
+        <option value="Buendia" data-regular="65.00" data-discounted="60.00">Buendia</option>
+        <option value="Ayala" data-regular="70.00" data-discounted="65.00">Ayala</option>
+        <option value="Magallanes" data-regular="75.00" data-discounted="70.00">Magallanes</option>
+        <option value="Taft Avenue" data-regular="80.00" data-discounted="75.00">Taft Ave.</option>
+        </select> 
+</div>
+<div class="header4">
+ <button class="btn btn-info" onclick="showFare('regular')">Regular Fare</button>
+<button class="btn btn-info" onclick="showFare('discounted')">Discounted Fare</button>
+</div>
+<img src="wheretogo.png">
+<img src="trainticket.png">
+    <div id="priceBox" class="price-box">
+        <span class="close-btn" onclick="hideFare()">✖</span>
+        <p id="result">Ticket Price: --</p>
+    </div>
+
+ <script>
+  function showFare(type) {
+        var destination = document.getElementById("destination");
+        var selectedOption = destination.options[destination.selectedIndex];
+
+        var regularPrice = parseFloat(selectedOption.getAttribute("data-regular"));
+        var discountedPrice = parseFloat(selectedOption.getAttribute("data-discounted"));
+
+        var price = (type === "regular") ? regularPrice : discountedPrice;
+
+        document.getElementById("result").textContent = `Ticket Price: ${price.toFixed(2)}`;
+        document.getElementById("priceBox").style.display = "block";
+    }
+
+    function hideFare() {
+        document.getElementById("priceBox").style.display = "none";
+    }
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
